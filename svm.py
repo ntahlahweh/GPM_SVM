@@ -16,10 +16,10 @@ y_test = test_data.iloc[:, 0].values  # target
 
 # Define the hyperparameter grid
 param_grid = {
-    'kernel': ('rbf', 'poly'),
+    'kernel': ('linear', 'rbf', 'poly'),
     'C': [5, 10, 100],
-    'gamma': [1],
-    'degree': [1, 2, 3]
+    'gamma': [1, 0.1, 0.01, 0.001],
+    'degree': [1, 2, 3, 4, 5, 6]
 }
 
 # Set up the grid search with cross-validation
